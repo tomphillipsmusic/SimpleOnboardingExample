@@ -14,6 +14,7 @@
 		3EBE217527C1391000DF7D72 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE217427C1390F00DF7D72 /* OnboardingView.swift */; };
 		3EBE217727C13B2B00DF7D72 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE217627C13B2B00DF7D72 /* Color+Extension.swift */; };
 		3EBE217927C13B8E00DF7D72 /* OnboardingInformationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE217827C13B8E00DF7D72 /* OnboardingInformationRow.swift */; };
+		3EBE217B27C1447A00DF7D72 /* OnboardingInformationRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE217A27C1447A00DF7D72 /* OnboardingInformationRowModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		3EBE217427C1390F00DF7D72 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		3EBE217627C13B2B00DF7D72 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		3EBE217827C13B8E00DF7D72 /* OnboardingInformationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInformationRow.swift; sourceTree = "<group>"; };
+		3EBE217A27C1447A00DF7D72 /* OnboardingInformationRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInformationRowModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +63,9 @@
 				3EBE216827C138DB00DF7D72 /* ContentView.swift */,
 				3EBE217427C1390F00DF7D72 /* OnboardingView.swift */,
 				3EBE217827C13B8E00DF7D72 /* OnboardingInformationRow.swift */,
-				3EBE216A27C138DD00DF7D72 /* Assets.xcassets */,
+				3EBE217A27C1447A00DF7D72 /* OnboardingInformationRowModel.swift */,
 				3EBE217627C13B2B00DF7D72 /* Color+Extension.swift */,
+				3EBE216A27C138DD00DF7D72 /* Assets.xcassets */,
 				3EBE216C27C138DD00DF7D72 /* Preview Content */,
 			);
 			path = OnboardingExample;
@@ -150,6 +153,7 @@
 				3EBE217527C1391000DF7D72 /* OnboardingView.swift in Sources */,
 				3EBE216927C138DB00DF7D72 /* ContentView.swift in Sources */,
 				3EBE216727C138DB00DF7D72 /* OnboardingExampleApp.swift in Sources */,
+				3EBE217B27C1447A00DF7D72 /* OnboardingInformationRowModel.swift in Sources */,
 				3EBE217727C13B2B00DF7D72 /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

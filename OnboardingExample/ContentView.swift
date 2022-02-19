@@ -7,10 +7,31 @@
 
 import SwiftUI
 
+/*
+ Simple example of an onboarding screen based on the example of Apple's Human Interface Guideliens
+ 
+ https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/onboarding/
+ */
 struct ContentView: View {
+    @AppStorage("isFirstTimeUser") private var isFirstTimeUser = true
+    
     var body: some View {
-        Text("Welcome To My Awesome App!")
-            .padding()
+        ZStack {
+            Color.secondary
+            VStack {
+                Text("Welcome To My Awesome App!")
+                    .foregroundColor(.white)
+                    .padding()
+                    .sheet(isPresented: $isFirstTimeUser, onDismiss: {isFirstTimeUser = false}) {
+                        OnboardingView()
+                    }
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(.primaryBlue)
+                            .shadow(radius: 10)
+                    )
+            }
+        }
     }
 }
 

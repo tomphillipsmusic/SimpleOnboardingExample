@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack {
             Text("What's New in Translate")
@@ -15,17 +17,22 @@ struct OnboardingView: View {
                 .bold()
                 .padding()
             
-            OnboardingInformationRow()
-            OnboardingInformationRow()
-            OnboardingInformationRow()
+            VStack(alignment: .leading) {
+                ForEach(OnboardingView.rowsData) { rowData in
+                    OnboardingInformationRow(data: rowData)
+                }
+            }
+            
             Spacer()
             Button(action: {}) {
                 Text("About Translation & Privacy...")
                     .foregroundColor(.primaryBlue)
             }
-
             
-            Button(action: {}) {
+            
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
                 Text("Continue")
                     .foregroundColor(.white)
             }
@@ -36,8 +43,16 @@ struct OnboardingView: View {
                     .frame(width: 300, height: 40)
             )
             .padding()
+            Spacer()
+                .frame(height: 50)
         }
     }
+    
+    static var rowsData = [
+        OnbardingInformationRowData(imageName: "platter.2.filled.iphone", imageColor: .primaryBlue, title: "Conversation Views", description: "Choose a side-by-side or face-to-face conversation view"),
+        OnbardingInformationRowData(imageName: "mic.fill", imageColor: .primaryBlue, title: "Auto Translate", description: "Respond in conversations without tapping the microphone button."),
+        OnbardingInformationRowData(imageName: "iphone", imageColor: .primaryBlue, title: "System-Wide-Translation", description: "Translates selected text anywhere on your iPhone.")
+    ]
 }
 
 struct OnboardingView_Previews: PreviewProvider {

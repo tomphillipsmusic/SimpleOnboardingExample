@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct OnboardingInformationRow: View {
+    let data: OnbardingInformationRowData
+    
     var body: some View {
         HStack {
-            Image(systemName: "platter.2.filled.iphone")
-                .font(.title)
-                .foregroundColor(.primaryBlue)
+            Image(systemName: data.imageName)
+                .font(.largeTitle)
+                .foregroundColor(data.imageColor)
                 .padding(.trailing, 5)
                 
-            
             VStack(alignment: .leading) {
-                Text("Conversation Views")
+                Text(data.title)
                     .font(.headline)
                     .padding(.bottom, 5)
                     
-                Text("Choose a side-by-side or face-to-face vonersation view.")
+                Text(data.description)
                     .font(.body
                     )
                     .foregroundColor(.secondary)
@@ -33,6 +34,6 @@ struct OnboardingInformationRow: View {
 
 struct OnboardingInformationRow_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingInformationRow()
+        OnboardingInformationRow(data: OnbardingInformationRowData(imageName: "platter.2.filled.iphone", imageColor: .primaryBlue, title: "Conversation Views", description: "Choose a side-by-side or face-to-face conversation view"))
     }
 }
