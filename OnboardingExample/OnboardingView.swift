@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @Environment(\.presentationMode) var presentationMode
-    
+
     var body: some View {
         VStack {
             Text("What's New in Translate")
@@ -31,7 +30,7 @@ struct OnboardingView: View {
             
             
             Button(action: {
-                presentationMode.wrappedValue.dismiss()
+                
             }) {
                 Text("Continue")
                     .foregroundColor(.white)
